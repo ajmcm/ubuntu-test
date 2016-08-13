@@ -29,7 +29,7 @@ require 'capistrano/deploy'
   
   set :rbenv_type, :user # or :system, depends on your rbenv setup
   #set :rbenv_ruby, '2.0.0-p451'
-  set :rbenv_ruby, '2.3.1-p112'
+  set :rbenv_ruby, '2.3.1'
 
 # Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
 Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }
