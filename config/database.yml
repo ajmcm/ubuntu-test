@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  user: deploy
+  password: <%= ENV["UBUNTUDB_PWD"] %>
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: ubuntudb
+
+test:
+  <<: *default
+  database: ubuntudb
+  
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: ubuntudb
+  pool: 5
+  username: deploy
+  password: <%= ENV["UBUNTUDB_PWD"] %>
